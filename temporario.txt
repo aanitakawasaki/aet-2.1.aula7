@@ -1,1 +1,0 @@
-● Utilize Webpack e outros módulos que julgar necessários para gerar e servir o bundle (pacote)
