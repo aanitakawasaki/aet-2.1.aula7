@@ -14,6 +14,11 @@ function clearError() {
     messageDiv.textContent = '';
 }
 
+function clearInputs() {
+    number1Input.textContent= '';
+    number2Input.textContent= '';
+}
+
 function calculate(operation: string) {
     const number1 = parseFloat(number1Input.value);
     const number2 = parseFloat(number2Input.value);
