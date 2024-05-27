@@ -1,12 +1,14 @@
-/*estilos gerais*/
+/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
     margin: 0;
+    color: #fff;
 }
 
 h1 {
@@ -14,67 +16,77 @@ h1 {
     margin-bottom: 20px;
 }
 
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .calculator {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
     text-align: center;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "number1 sum multiplication number2"
+        "number1 subtraction division number2"
+        "message message message message";
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
 }
 
 input[type="text"] {
-    width: 60px;
+    width: 100px;
     padding: 10px;
-    margin: 10px;
     border: 2px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     text-align: center;
     transition: border-color 0.3s;
+    outline: none;
 }
 
 input[type="text"]:focus {
-    border-color: #666;
+    border-color: #ff5f6d;
 }
 
 button {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
+    width: 80px;
+    height: 80px;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    background-color: #4CAF50;
+    border-radius: 50%;
+    font-size: 24px;
+    background-color: #ff5f6d;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    outline: none;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ff2f4d;
     transform: scale(1.1);
 }
 
 button:active {
-    background-color: #39843c;
+    background-color: #e0001a;
 }
 
 #message {
     margin-top: 20px;
     font-size: 18px;
-    color: red;
+    color: #e0001a;
+    text-align: center;
+    width: 100%;
+    grid-area: message;
 }
 
-/*layout específico da calculadora*/
-.calculator {
-    display: grid;
-    grid-template-areas:
-        "number1 . number2"
-        "sum multiplication"
-        "subtraction division";
-    gap: 10px;
-}
-
+/* Definições das áreas do grid */
 #number1 {
     grid-area: number1;
 }
