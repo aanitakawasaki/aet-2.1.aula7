@@ -27,6 +27,7 @@ function calculate(operation: string) {
     
     if (isNaN(number1) || isNaN(number2)) {
         showError('Os valores inseridos não são válidos.');
+        clearInputs();
         return;
     }
     
@@ -45,12 +46,14 @@ function calculate(operation: string) {
         case '/':
             if (number2 === 0) {
                 showError('Não é possível dividir por zero.');
+                clearInputs();
                 return;
             }
             result = number1 / number2;
             break;
         default:
             showError('Operação inválida.');
+            clearInputs();
             return;
     }
     messageDiv.textContent = `O resultado é: ${result}.`;
