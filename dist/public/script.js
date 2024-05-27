@@ -1,39 +1,30 @@
-const number1Input = document.querySelector('#number1') as HTMLInputElement;
-const number2Input = document.querySelector('#number2') as HTMLInputElement;
-const sumButton = document.querySelector('#sum') as HTMLButtonElement;
-const subtractionButton = document.querySelector('#subtraction') as HTMLButtonElement;
-const multiplicationButton = document.querySelector('#multiplication') as HTMLButtonElement;
-const divisionButton = document.querySelector('#division') as HTMLButtonElement;
-const messageDiv = document.querySelector('#message') as HTMLDivElement;
-
-function showError(message: string) {
+const number1Input = document.querySelector('#number1');
+const number2Input = document.querySelector('#number2');
+const sumButton = document.querySelector('#sum');
+const subtractionButton = document.querySelector('#subtraction');
+const multiplicationButton = document.querySelector('#multiplication');
+const divisionButton = document.querySelector('#division');
+const messageDiv = document.querySelector('#message');
+function showError(message) {
     messageDiv.textContent = message;
 }
-
 function clearError() {
     messageDiv.textContent = '';
 }
-
 function clearInputs() {
-    number1Input.textContent= '';
-    number2Input.textContent= '';
+    number1Input.textContent = '';
+    number2Input.textContent = '';
 }
-
-function calculate(operation: string) {
+function calculate(operation) {
     clearInputs();
-    
     const number1 = parseFloat(number1Input.value);
     const number2 = parseFloat(number2Input.value);
-    
     clearError();
-    
     if (isNaN(number1) || isNaN(number2)) {
         showError('Os valores inseridos não são válidos.');
         return;
     }
-    
-    let result: number;
-    
+    let result;
     switch (operation) {
         case '+':
             result = number1 + number2;
@@ -57,8 +48,8 @@ function calculate(operation: string) {
     }
     messageDiv.textContent = `O resultado é: ${result}.`;
 }
-
 sumButton.addEventListener('click', () => calculate('+'));
 subtractionButton.addEventListener('click', () => calculate('-'));
 multiplicationButton.addEventListener('click', () => calculate('*'));
 divisionButton.addEventListener('click', () => calculate('/'));
+export {};
