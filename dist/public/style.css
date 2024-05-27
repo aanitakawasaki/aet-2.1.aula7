@@ -1,0 +1,102 @@
+/*estilos gerais*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 60px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #666;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #39843c;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}
+
+/*layout específico da calculadora*/
+.calculator {
+    display: grid;
+    grid-template-areas:
+        "number1 . number2"
+        "sum multiplication"
+        "subtraction division";
+    gap: 10px;
+}
+
+#number1 {
+    grid-area: number1;
+}
+
+#number2 {
+    grid-area: number2;
+}
+
+#sum {
+    grid-area: sum;
+}
+
+#subtraction {
+    grid-area: subtraction;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#division {
+    grid-area: division;
+}
+
+/*tive que copiar esse script.css na mão para dentro de dist > public, senão ele não encontrava o css. tem alguma outra maneira mais automatizada de fazer isso?-->
