@@ -1,7 +1,3 @@
-● Desenvolver uma página web que funcione como uma calculadora básica, onde o usuário possa inserir dois números e realizar as operações matemáticas simples: adição, subtração, multiplicação e divisão. 
-
-● Caso o usuário tente realizar uma operação utilizando valores inválidos, deve receber uma mensagem apropriada. 
-
 ● A página deve ser esteticamente agradável. 
 
 ● Todo o código precisa estar fortemente tipado. 
