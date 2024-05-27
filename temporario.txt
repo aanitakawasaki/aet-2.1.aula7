@@ -1,5 +1,3 @@
 ● A página deve ser esteticamente agradável. 
 
-● Todo o código precisa estar fortemente tipado. 
-
 ● Utilize Webpack e outros módulos que julgar necessários para gerar e servir o bundle (pacote)
