@@ -12,11 +12,10 @@ function clearError() {
     messageDiv.textContent = '';
 }
 function clearInputs() {
-    number1Input.textContent = '';
-    number2Input.textContent = '';
+    number1Input.value = '';
+    number2Input.value = '';
 }
 function calculate(operation) {
-    clearInputs();
     const number1 = parseFloat(number1Input.value);
     const number2 = parseFloat(number2Input.value);
     clearError();
@@ -47,6 +46,7 @@ function calculate(operation) {
             return;
     }
     messageDiv.textContent = `O resultado é: ${result}.`;
+    clearInputs();
 }
 sumButton.addEventListener('click', () => calculate('+'));
 subtractionButton.addEventListener('click', () => calculate('-'));

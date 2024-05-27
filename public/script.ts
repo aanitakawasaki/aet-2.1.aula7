@@ -15,13 +15,11 @@ function clearError() {
 }
 
 function clearInputs() {
-    number1Input.textContent= '';
-    number2Input.textContent= '';
+    number1Input.value= '';
+    number2Input.value= '';
 }
 
-function calculate(operation: string) {
-    clearInputs();
-    
+function calculate(operation: string) {    
     const number1 = parseFloat(number1Input.value);
     const number2 = parseFloat(number2Input.value);
     
@@ -56,6 +54,7 @@ function calculate(operation: string) {
             return;
     }
     messageDiv.textContent = `O resultado é: ${result}.`;
+    clearInputs();
 }
 
 sumButton.addEventListener('click', () => calculate('+'));
