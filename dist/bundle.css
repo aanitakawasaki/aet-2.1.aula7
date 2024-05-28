@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    margin: 0;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "number1 sum multiplication number2"
+        "number1 subtraction division number2"
+        "message message message message";
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #ff5f6d;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    background-color: #ff5f6d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ff2f4d;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #e0001a;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #e0001a;
+    text-align: center;
+    width: 100%;
+    grid-area: message;
+}
+
+#number1 {
+    grid-area: number1;
+}
+
+#number2 {
+    grid-area: number2;
+}
+
+#sum {
+    grid-area: sum;
+}
+
+#subtraction {
+    grid-area: subtraction;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#division {
+    grid-area: division;
+}
